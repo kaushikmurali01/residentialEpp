@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+/>
+<title>Energy Performance Program</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+  /* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  background-color: fffbf2;
+}
+
+body {
+  background-color: #f9fafb;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fffbf2;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header img {
+  max-width: 140px;
+}
+
+.header a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.header a:hover {
+  background: #f97316;
+  color: #fff;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url("https://s.yimg.com/uu/api/res/1.2/YeA1dbWsdNcSqtPj2eAj9g--%7EB/aD0yMTIxO3c9Mzc3MTtzbT0xO2FwcGlkPXl0YWNoeW9u/https:/media-mbst-pub-ue1.s3.amazonaws.com/creatr-images/2019-07/4a277b30-aa39-11e9-b6ff-c77d8e8571b8");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  position: relative;
+  margin-top: 80px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.hero .btn {
+  background-color: #f97316;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.hero .btn:hover {
+  background-color: #e65a00;
+  transform: translateY(-3px);
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, #fd9c57 0%, #f5845b 100%);
+  color: #ffffff;
+  text-align: center;
+  padding: 5rem 2rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: #ffffff;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cta-section p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.cta-section .btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: #ffffff;
+  color: #f97316;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+}
+
+.cta-section .btn:hover {
+  background: #ffe5d9;
+  color: #e65a00;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(249, 115, 22, 0.3);
+}
+
+/* Decorative Background Shapes */
+.cta-section::after {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.cta-section::before {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  right: -100px;
+  width: 250px;
+  height: 250px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.cta-section * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Info Cards */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.info-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.info-card:hover {
+  transform: translateY(-10px);
+}
+
+.info-card h3 {
+  font-size: 1.5rem;
+  color: #f97316;
+  margin-bottom: 1rem;
+}
+
+.info-card p {
+  color: #555;
+  line-height: 1.5;
+}
+
+/* How it Works Section */
+.how-it-works {
+    background: linear-gradient(135deg, #fd9c57 0%, #f5845b 100%);
+  color: #ffffff;
+  text-align: center;
+  padding: 5rem 2rem;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+/* Decorative Background Shapes */
+.how-it-works::after {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.how-it-works::before {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  right: -100px;
+  width: 250px;
+  height: 250px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.how-it-works h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.steps {
+    display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+}
+
+.step-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative
+}
+
+.step-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.step-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f97316;
+  margin-bottom: 1rem;
+}
+
+.step-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Energy Model */
+.energy-model {
+    background: linear-gradient(to right, #ffe5d9, #f0fff4);
+    padding: 6rem 2rem;
+    border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  }
+
+  .energy-model h2 {
+    text-align: center; 
+    font-size: 2.5rem; 
+    margin-bottom: 1rem;
+    color: #000; 
+    font-weight: 700;
+  }
+
+  .energy-model p {
+    text-align: center; 
+    color: #6b7280; 
+    margin-bottom: 3rem;
+  }
+
+  .model-preview {
+    background: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-top: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .model-preview img {
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+
+/* Virtual Audit Section */
+#virtual-audit-section {
+  background: #fffaf0;
+  padding: 4rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.virtual-audit-card {
+  background: #fef1d6 !important;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.radio-group label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.radio-group label:hover {
+  color: #f97316;
+}
+
+.radio-group input[type="radio"]:checked + span {
+  color: #f97316;
+}
+
+/* Calculator Section */
+.calculator-form {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.calc-row label {
+  font-size: 1rem;
+  color: #555;
+}
+
+.calc-row input {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.calc-row input:focus {
+  border-color: #f97316;
+  box-shadow: 0 0 5px rgba(249, 115, 22, 0.5);
+}
+
+button {
+  background-color: #f97316;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #e65a00;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(249, 115, 22, 0.2);
+}
+
+
+  /* Virtual Audit Section */
+  #virtual-audit-section {
+    display: none;
+    padding: 2rem;
+    margin-top: 2rem;
+    margin: 0 auto;
+    background-color: #fffaf0;
+  }
+
+  #virtual-audit-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #f97316;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  #virtual-audit-section p {
+    margin-bottom: 1rem;
+    color: #555;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  .virtual-audit-card {
+    background: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    padding: 2rem;
+    margin-top: 1rem;
+  }
+
+  #technology-selection-section {
+    display: none;
+    margin-top: 1.5rem;
+    background: #fffaf0;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  }
+
+  #technology-selection-section h3 {
+    margin-bottom: 1rem; 
+    color: #f97316; 
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .tech-options {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .tech-option-btn {
+    padding: 0.75rem 1rem;
+    background: #f97316;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+
+  .tech-option-btn:hover {
+    background: #e65a00;
+    transform: translateY(-2px);
+  }
+
+  /* Calculator Section */
+  #calculator-section {
+    display: none;
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    position: relative;
+    background: linear-gradient(135deg, #fffaf0, #fffaf0);
+    overflow: hidden;
+  }
+
+  /* General Calculator Styling */
+.calculator-container {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  border: 1.5px solid #f97316;
+}
+
+.calculator-header {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #f97316, #ff7f50);
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 1rem;
+  padding-bottom: 0;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-header svg {
+  width: 40px;
+  height: 40px;
+  margin-right: 1rem;
+  fill: #ffffff;
+}
+
+.calculator-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff !important;
+}
+
+.calculator-form {
+  display: grid;
+  gap: 1rem;
+  border-color: #e65a00 !important;
+  border-radius: 2px;
+}
+
+.calc-section-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #f97316;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid #f97316;
+  margin-bottom: 20px;
+}
+
+.calc-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.calc-row label {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.calc-row input {
+  padding: 0.75rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  font-size: 1rem;
+  outline: none;
+}
+
+.calc-row input:focus {
+  border-color: #f97316;
+  box-shadow: 0 0 5px rgba(249, 115, 22, 0.3);
+}
+
+button {
+  background: linear-gradient(135deg, #f97316, #ff7f50);
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background: #e65a00;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(249, 115, 22, 0.3);
+}
+
+.calc-result {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #f0fff4;
+  border: 2px solid #34d399;
+  border-radius: 8px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #065f46;
+  text-align: center;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  /* Hide/Show Different Tech Calculators */
+  .tech-calculator {
+    display: none;
+  }
+
+  .tech-calculator.active {
+    display: block;
+  }
+
+  /* Custom Styled Radio Buttons */
+.radio-group {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.radio-label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #333;
+  padding-left: 2rem; /* Space for radio button */
+  transition: color 0.3s ease;
+}
+
+.radio-label:hover {
+  color: #f97316;
+}
+
+.radio-label input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: absolute;
+  left: 0;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  background-color: #fff;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.radio-label input:checked {
+  border-color: #f97316;
+}
+
+.radio-label input:checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: #f97316;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+/* Contact */
+.contact-section {
+    background: #fffbf2;
+    padding: 4rem 2rem;
+    text-align: center;
+    border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  }
+
+  .contact-section h2 {
+    font-size: 2.5rem; 
+    margin-bottom: 1rem;
+    color: #000; 
+    font-weight: 700;
+  }
+
+  .contact-section p {
+    color: #6b7280; 
+    margin-bottom: 2rem;
+  }
+
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    color: #374151;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #f97316;
+    outline: none;
+    box-shadow: 0 0 8px rgba(249,115,22,0.2);
+  }
+
+  .contact-form button {
+    padding: 1rem 2rem;
+    background: #f97316;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .contact-form button:hover {
+    background: #e65a00;
+    transform: translateY(-2px);
+  }
+
+  .calc-result {
+  margin-top: 1rem;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fef9f4;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.result-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.result-label {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #555;
+}
+
+.result-value {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #66BB6A;
+}
+
+.result-line:last-child {
+  margin-bottom: 0;
+}
+
+/* Tabs Container */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: none; /* Remove bottom border */
+}
+
+/* Individual Tab */
+.tab {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #555;
+  cursor: pointer;
+  background: #f7f7f7; /* Light grey background */
+  border: 2px solid #ddd; /* Border around tab */
+  border-radius: 8px 8px 8px 8px; /* Rounded top corners */
+  transition: all 0.3s ease; /* Smooth transition */
+  position: relative;
+  top: 2px; /* Lift slightly for better elevation */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Active Tab */
+.tab.active {
+  background: #f97316; /* Highlighted background */
+  color: #ffffff; /* White text for active */
+  border-color: #f97316;
+  box-shadow: 0 6px 10px rgba(249, 115, 22, 0.2);
+  transform: translateY(-2px); /* Slight lift on active tab */
+}
+
+/* Tab Hover Effect */
+.tab:hover {
+  background: #ffe5d9; /* Light orange on hover */
+  color: #f97316;
+  border-color: #f97316;
+}
+
+
+
+</style>
+</head>
+<body>
+  <div class="header">
+    <img class="logo" src="./saveonlogo.svg" alt="Logo" />
+    <div style="margin-left:auto; display:flex; gap:1rem;">
+      <a href="#" class="tab1">How it works</a>
+      <a href="#" class="tab2" id="virtualAuditTab">Virtual Audit</a>
+      <a href="#" class="tab3">Contact Us</a>
+      <a href="#" class="tab4">Sign Up</a>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>
+        Smart Energy Management for Your Home
+      </h1>
+      <p style="font-size: 1.5rem; margin-bottom: 2rem; max-width: 600px">
+          Join the Residential Energy Performance Program to understand and
+          optimize your home's energy usage.
+        </p>
+      <a href="#" class="btn">Sign Up</a>
+    </div>
+  </section>
+
+  <section class="how-it-works">
+    <div class="container">
+      <h2>How It Works</h2>
+      <p>Understanding your home's energy usage has never been simpler</p>
+
+      <div class="steps">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Sign Up and Complete Virtual Audit</h3>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Connect Your Data</h3>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Get Energy Model & Understand Usage</h3>
+        </div>
+      </div>
+      <div class="steps" style="margin-top:2rem;">
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <h3>Get Customized Offers & Complete Projects</h3>
+        </div>
+        <div class="step-card">
+          <div class="step-number">5</div>
+          <h3>Receive Incentives</h3>
+        </div>
+        <div class="step-card">
+          <div class="step-number">6</div>
+          <h3>Follow Up & See How You Are Doing</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="energy-model">
+    <div class="container">
+      <h2>How does this program benefit you?</h2>
+      <p>For every type of home whether you own or rent, EPP is made for you</p>
+
+      <div class="model-preview">
+        <img
+          src="https://as1.ftcdn.net/v2/jpg/06/83/07/52/1000_F_683075260_6A6kdXVSsfDF37kRdxAuR3Qqbv0XQNUF.jpg"
+          alt="Home illustration"
+        />
+        <div class="features-grid">
+          <div class="info-card">
+            <h3>Save on energy bills</h3>
+            <p>
+              Cut down on monthly expenses using our energy models to refine
+              your energy usage.
+            </p>
+          </div>
+          <div class="info-card">
+            <h3>Earn incentives from Save on Energy</h3>
+            <p>Get rewards by meeting energy reduction targets.</p>
+          </div>
+          <div class="info-card">
+            <h3>Access technical support and resources</h3>
+            <p>Find help, tips, and guidance to improve efficiency.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>
+        Reach out to our support team if you have any questions or need assistance.
+      </p>
+      <form class="contact-form">
+        <input type="text" placeholder="Name" required />
+        <input type="text" placeholder="Company" required />
+        <input type="text" placeholder="Address" required />
+        <input type="email" placeholder="Email" required />
+        <input type="text" placeholder="Phone" required />
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Virtual Audit Section -->
+
+  <section id="virtual-audit-section">
+    <div class="container">
+    <h2>Virtual Audit</h2>
+    <p>Select an option below to begin your audit.</p>
+    <div class="virtual-audit-card">
+        <div class="tabs">
+            <div class="tab active" id="homeDetailsTab">Home Details</div>
+            <div class="tab" id="techSelectionTab">Technology Selection</div>
+          </div>
+          
+      
+
+      <div id="technology-selection-section">
+        <h3>Select Technology Option:</h3>
+        <div class="tech-options">
+          <button class="tech-option-btn" data-tech="windowReplacement">Window Replacement</button>
+          <button class="tech-option-btn" data-tech="efficientFurnace">Efficient Furnace</button>
+          <button class="tech-option-btn" data-tech="gshp">Ground Source Heat Pump</button>
+        </div>
+
+        <div id="calculator-section">
+          <div class="calculator-container">
+
+            <!-- WINDOW CALCULATOR (With Updated Fields) -->
+            <div id="windowCalculator" class="tech-calculator">
+              <div class="calculator-header">
+                <h3>Energy Savings Calculator (Window Replacement)</h3>
+              </div>
+              
+              
+                <div class="calc-section">
+                  <div class="calc-section-title">Calculation Values</div>
+                  <div class="calc-row">
+                    <label>Thermal Transmittance of Base Case Window (W/m²K), U Baseline:</label>
+                    <input type="number" step="0.01" id="baseCaseU" value="2.00">
+                  </div>
+                  <div class="calc-row">
+                    <label>Thermal Transmittance of Efficient Case Window (W/m²K), U Upgrade:</label>
+                    <input type="number" step="0.01" id="upgradeU" value="1.22">
+                  </div>
+                  <div class="calc-row">
+                    <label>Window Area (m²):</label>
+                    <input type="number" step="0.00001" id="windowAreaVal" value="1.11484">
+                  </div>
+                  <div class="calc-row">
+                    <label>Heating Degree Days (C-days):</label>
+                    <input type="number" step="1" id="HDD" value="5092">
+                  </div>
+                  <div class="calc-row">
+                    <label>Cooling Degree Days (C-days):</label>
+                    <input type="number" step="1" id="CDD" value="685">
+                  </div>
+                  <div class="calc-row">
+                    <label>Conversion Factor (Days to Hours):</label>
+                    <input type="number" step="1" id="daysToHours" value="24">
+                  </div>
+                  <div class="calc-row">
+                    <label>Adjustment Factor - Calculation to Observed Results:</label>
+                    <input type="number" step="0.01" id="adjustFactor" value="0.63">
+                  </div>
+                  <div class="calc-row">
+                    <label>DUA (Discretionary Use Adjustment):</label>
+                    <input type="number" step="0.01" id="dua" value="0.75">
+                  </div>
+                  <div class="calc-row">
+                    <label>Efficiency of Heating System (0-1):</label>
+                    <input type="number" step="0.01" id="heatingEff" value="0.80">
+                  </div>
+                  <div class="calc-row">
+                    <label>Efficiency of Cooling System (SEER):</label>
+                    <input type="number" step="0.01" id="seer" value="13.40">
+                  </div>
+                  <div class="calc-row">
+                    <label>Percentage of Air Conditioning (0-1):</label>
+                    <input type="number" step="0.01" id="acPercent" value="0.37">
+                  </div>
+                  <div class="calc-row">
+                    <label>Conversion Factor for Wh to kWh:</label>
+                    <input type="number" step="0.0001" id="whTokWh" value="0.001">
+                  </div>
+                  <div class="calc-row">
+                    <label>Conversion Factor from Btu to kBtu:</label>
+                    <input type="number" step="1" id="btuTokBtu" value="1000">
+                  </div>
+                  <div class="calc-row">
+                    <label>Conversion Factor for kWh to GJ:</label>
+                    <input type="number" step="0.0001" id="kWhToGJ" value="0.0036">
+                  </div>
+                </div>
+
+                <button id="calculateBtn">Calculate</button>
+                <div id="calcResult" class="calc-result"></div>
+              
+            </div>
+
+            <!-- EFFICIENT FURNACE CALCULATOR -->
+            <div id="furnaceCalculator" class="tech-calculator">
+              <div class="calculator-header">
+                <h3>Energy Savings Calculator (Efficient Furnace)</h3>
+              </div>
+              
+                <div class="calc-section">
+                  <div class="calc-section-title">Calculation Values</div>
+                  <div class="calc-row">
+                    <label>Efficient Furnace AFUE (0-1):</label>
+                    <input type="number" step="0.01" id="furnaceAFUE" value="0.97">
+                  </div>
+                  <div class="calc-row">
+                    <label>Base Case AFUE (0-1):</label>
+                    <input type="number" step="0.01" id="furnaceBaseAFUE" value="0.95">
+                  </div>
+                  <div class="calc-row">
+                    <label>Capacity Input (mBTU/hr):</label>
+                    <input type="number" step="0.001" id="furnaceCapacity" value="0.08">
+                  </div>
+                  <div class="calc-row">
+                    <label>EFLH (Heating):</label>
+                    <input type="number" step="1" id="furnaceEFLH" value="1998">
+                  </div>
+                  <div class="calc-row">
+                    <label>mBtu to GJ Conversion:</label>
+                    <input type="number" step="0.0000001" id="furnacemBtuToGJ" value="1.0550559">
+                  </div>
+                </div>
+
+                <button id="calculateFurnaceBtn">Calculate</button>
+                <div id="furnaceResult" class="calc-result"></div>
+    
+            </div>
+
+            <!-- GSHP CALCULATOR -->
+            <div id="gshpCalculator" class="tech-calculator">
+              <div class="calculator-header">
+                <h3>Energy Savings Calculator (Ground Source Heat Pump)</h3>
+              </div>
+        
+                <div class="calc-section">
+                  <div class="calc-section-title">Calculation Values</div>
+                  <div class="calc-row">
+                    <label>EFLH_heating:</label>
+                    <input type="number" step="1" id="gshpEFLHHeating" value="1998">
+                  </div>
+                  <div class="calc-row">
+                    <label>EFLH_cooling:</label>
+                    <input type="number" step="1" id="gshpEFLHCooling" value="1161">
+                  </div>
+                  <div class="calc-row">
+                    <label>SEER_base:</label>
+                    <input type="number" step="0.1" id="gshpSEERBase" value="13">
+                  </div>
+                  <div class="calc-row">
+                    <label>EER_efficient equipment:</label>
+                    <input type="number" step="0.01" id="gshpEER" value="22.43">
+                  </div>
+                  <div class="calc-row">
+                    <label>Factor (EER to SEER):</label>
+                    <input type="number" step="0.01" id="gshpFactor" value="1.02">
+                  </div>
+                  <div class="calc-row">
+                    <label>Kilowatt conversion factor:</label>
+                    <input type="number" step="1" id="gshpKwFactor" value="1000">
+                  </div>
+                  <div class="calc-row">
+                    <label>Btu/h_heat:</label>
+                    <input type="number" step="1" id="gshpBtuHHeat" value="80000">
+                  </div>
+                  <div class="calc-row">
+                    <label>Btu/h_cool:</label>
+                    <input type="number" step="1" id="gshpBtuHCool" value="36000">
+                  </div>
+                  <div class="calc-row">
+                    <label>HSPF_base:</label>
+                    <input type="number" step="0.01" id="gshpHSPFBase" value="7.70">
+                  </div>
+                  <div class="calc-row">
+                    <label>COP_ee:</label>
+                    <input type="number" step="0.01" id="gshpCOP" value="4.18">
+                  </div>
+                  <div class="calc-row">
+                    <label>Conversion (watts to Btu):</label>
+                    <input type="number" step="0.001" id="gshpWattToBtu" value="3.412">
+                  </div>
+                </div>
+
+                <button id="calculateGSHPBtn">Calculate</button>
+                <div id="gshpResult" class="calc-result"></div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>Start Your Energy Journey Today</h2>
+      <p>
+        Join EPP's residential program and take control of your home's energy
+        usage.
+      </p>
+      <a href="#" class="btn" style="background: #ffffff; color: #f97316"
+        >Sign Up Now</a
+      >
+    </div>
+  </div>
+  </section>
+
+<script>
+  const virtualAuditTab = document.getElementById('virtualAuditTab');
+  const virtualAuditSection = document.getElementById('virtual-audit-section');
+  const auditOptions = document.getElementsByName('auditOption');
+  const techSection = document.getElementById('technology-selection-section');
+  const calculatorSection = document.getElementById('calculator-section');
+
+  const windowCalculator = document.getElementById('windowCalculator');
+  const furnaceCalculator = document.getElementById('furnaceCalculator');
+  const gshpCalculator = document.getElementById('gshpCalculator');
+
+  // Show Virtual Audit section when tab is clicked
+  virtualAuditTab.addEventListener('click', function(e) {
+    e.preventDefault();
+    virtualAuditSection.style.display = 'block';
+    window.scrollTo({ top: virtualAuditSection.offsetTop, behavior: 'smooth' });
+  });
+
+  // Tabs for Home Details and Technology Selection
+const homeDetailsTab = document.getElementById('homeDetailsTab');
+const techSelectionTab = document.getElementById('techSelectionTab');
+const tech_Section = document.getElementById('technology-selection-section');
+
+// Show Home Details Tab (initial view)
+homeDetailsTab.addEventListener('click', function () {
+  homeDetailsTab.classList.add('active');
+  techSelectionTab.classList.remove('active');
+  tech_Section.style.display = 'none';
+});
+
+techSelectionTab.addEventListener('click', function () {
+  techSelectionTab.classList.add('active');
+  homeDetailsTab.classList.remove('active');
+  tech_Section.style.display = 'block';
+});
+
+
+  // Listen for Tech Option buttons
+  const techButtons = document.querySelectorAll('.tech-option-btn');
+  techButtons.forEach(btn => {
+    btn.addEventListener('click', function() {
+      calculatorSection.style.display = 'block';
+      windowCalculator.classList.remove('active');
+      furnaceCalculator.classList.remove('active');
+      gshpCalculator.classList.remove('active');
+
+      if (this.dataset.tech === 'windowReplacement') {
+        windowCalculator.classList.add('active');
+      } else if (this.dataset.tech === 'efficientFurnace') {
+        furnaceCalculator.classList.add('active');
+      } else if (this.dataset.tech === 'gshp') {
+        gshpCalculator.classList.add('active');
+      }
+    });
+  });
+
+  // WINDOW CALCULATION (Placeholder values)
+  document.getElementById('calculateBtn').addEventListener('click', function() {
+    const baseCaseU = parseFloat(document.getElementById('baseCaseU').value);        // C18
+  const upgradeU = parseFloat(document.getElementById('upgradeU').value);          // C19
+  const windowAreaVal = parseFloat(document.getElementById('windowAreaVal').value); // C20
+  const HDD = parseFloat(document.getElementById('HDD').value);                    // C21
+  const CDD = parseFloat(document.getElementById('CDD').value);                    // C22
+  const daysToHours = parseFloat(document.getElementById('daysToHours').value);     // C23
+  const adjustFactor = parseFloat(document.getElementById('adjustFactor').value);   // C24
+  const dua = parseFloat(document.getElementById('dua').value);                     // C25
+  const heatingEff = parseFloat(document.getElementById('heatingEff').value);       // C26 (as decimal, e.g. 0.8)
+  const seer = parseFloat(document.getElementById('seer').value);                   // C27
+  const acPercent = parseFloat(document.getElementById('acPercent').value);         // C28
+  const whTokWh = parseFloat(document.getElementById('whTokWh').value);             // C29
+  const kWhToGJ = parseFloat(document.getElementById('kWhToGJ').value);             // C31
+
+  // Calculate Annual Energy Savings - Gas
+  const annualEnergySavingsGas = ((baseCaseU - upgradeU) * windowAreaVal * HDD * daysToHours * adjustFactor * kWhToGJ * whTokWh) / heatingEff;
+
+  // Calculate Annual Energy Savings - Electricity
+  const annualEnergySavingsElectricity = ((baseCaseU - upgradeU) * windowAreaVal * CDD * daysToHours * dua * kWhToGJ * whTokWh * acPercent) / seer;
+
+  // Display the results
+  const calcResult = document.getElementById('calcResult');
+  calcResult.innerHTML = `<div class="result-line">
+      <span class="result-label">Annual Energy Savings - Gas:</span>
+      <span class="result-value">${annualEnergySavingsGas.toFixed(3)} GJ</span>
+    </div>
+    <div class="result-line">
+      <span class="result-label">Annual Energy Savings - Electricity:</span>
+      <span class="result-value">${annualEnergySavingsElectricity} kWh</span>
+    </div>`;
+  calcResult.classList.add('animate');
+  });
+
+  // FURNACE CALCULATION (Placeholder logic)
+  document.getElementById('calculateFurnaceBtn').addEventListener('click', function() {
+    // Retrieve values from input fields
+  const furnaceAFUE = parseFloat(document.getElementById('furnaceAFUE').value);    // C18 (e.g., 0.97)
+  const furnaceBaseAFUE = parseFloat(document.getElementById('furnaceBaseAFUE').value); // C19 (e.g., 0.95)
+  const furnaceCapacity = parseFloat(document.getElementById('furnaceCapacity').value); // C20 (0.08)
+  const furnaceEFLH = parseFloat(document.getElementById('furnaceEFLH').value);    // C21 (1998)
+  const furnaceMBtuToGJ = parseFloat(document.getElementById('furnacemBtuToGJ').value); // C22 (1.0550559)
+
+  // Calculate Annual Energy Savings - Gas using the given formula
+  const annualEnergySavingsGas = furnaceEFLH * furnaceCapacity * furnaceMBtuToGJ * ((furnaceAFUE / furnaceBaseAFUE) - 1);
+
+  // Display the result
+  const furnaceResult = document.getElementById('furnaceResult');
+
+  furnaceResult.innerHTML = `<div class="result-line">
+      <span class="result-label">Annual Energy Savings - Gas:</span>
+      <span class="result-value">${annualEnergySavingsGas.toFixed(3)} GJ</span>
+    </div>`;
+  furnaceResult.classList.add('animate');
+  });
+
+  // GSHP CALCULATION (Placeholder logic)
+  document.getElementById('calculateGSHPBtn').addEventListener('click', function() {
+    // Retrieve values from input fields
+    const EFLH_heating = parseFloat(document.getElementById('gshpEFLHHeating').value);   // C18
+  const EFLH_cooling = parseFloat(document.getElementById('gshpEFLHCooling').value);   // C19
+  const SEER_base = parseFloat(document.getElementById('gshpSEERBase').value);         // C20
+  const EER_efficient = parseFloat(document.getElementById('gshpEER').value);          // C21
+  const Btu_h_heat = parseFloat(document.getElementById('gshpBtuHHeat').value);        // C24
+  const Btu_h_cool = parseFloat(document.getElementById('gshpBtuHCool').value);        // C25
+  const HSPF_base = parseFloat(document.getElementById('gshpHSPFBase').value);         // C26
+  const COP_ee = parseFloat(document.getElementById('gshpCOP').value);                 // C27
+  const wattToBtu = parseFloat(document.getElementById('gshpWattToBtu').value); 
+  // Annual Energy Savings - Gas:
+  // ((C18*C24*((1/C26)-(1/(C27*C28))))/1000)/277.78
+  const annualEnergySavingsGas = ((EFLH_heating * Btu_h_heat * ((1/HSPF_base) - (1/(COP_ee * wattToBtu)))) / 1000) / 277.78;
+
+  // Annual Energy Savings - Electricity:
+  // ((C19*C25*((1/C20)-(1/(C21*1.02))))/1000)/277.78
+  const annualEnergySavingsElectricity = ((EFLH_cooling * Btu_h_cool * ((1/SEER_base) - (1/(EER_efficient * 1.02)))) / 1000) / 277.78;
+
+  // Display the results
+  const gshpResult = document.getElementById('gshpResult');
+  gshpResult.innerHTML = `<div class="result-line">
+      <span class="result-label">Annual Energy Savings - Gas:</span>
+      <span class="result-value">${annualEnergySavingsGas.toFixed(3)} GJ</span>
+    </div>
+    <div class="result-line">
+      <span class="result-label">Annual Energy Savings - Electricity:</span>
+      <span class="result-value">${annualEnergySavingsElectricity} kWh</span>
+    </div>`;
+  gshpResult.classList.add('animate');
+  });
+</script>
+</body>
+</html>
